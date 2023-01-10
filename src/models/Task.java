@@ -1,4 +1,4 @@
-package src.models;
+package models;
 
 import java.sql.Timestamp;
 
@@ -14,17 +14,17 @@ import javax.persistence.Table;
 @Entity
 @NamedQueries({
     @NamedQuery(
-            name = "getAllMessages",
+            name = "getAllTasks",
             query = "SELECT m FROM Task AS m ORDER BY m.id DESC"
             ),
     @NamedQuery(
-            name = "getMessagesCount",
+            name = "getTasksCount",
             query = "SELECT COUNT(m) FROM Task AS m"
             )
 })
 
 
-@Table(name = "messages")
+@Table(name = "tasks")
 public class Task {
     @Id
     @Column(name = "id")
